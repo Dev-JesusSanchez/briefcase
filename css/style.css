@@ -104,6 +104,53 @@ body {
     animation: rebotar 1s ease-in-out alternate infinite;
 }
 
+/* CONOCEME */
+
+.conoceme h2 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conoceme p {
+    margin: 0 2rem;
+    color: #fff;
+    line-height: 2rem;
+    text-align: center;
+    font-family: "Kode Mono", monospace;
+}
+
+.conoceme__arrow {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.conoceme__arrow i {
+    cursor: pointer;
+}
+
+.conoceme__option {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conoceme__options {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #ccc;
+    font-size: 0.9rem;
+}
+
 /* FOOTER */
 
 .footer {
@@ -159,5 +206,9 @@ body {
         margin: 0 0 2rem 0;
         width: 30vw;
         height: 30vh;
+    }
+
+    .conoceme__options {
+        margin: 0 0 1rem 0;
     }
 }

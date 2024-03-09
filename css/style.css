@@ -106,9 +106,9 @@ body {
 
 /* CONOCEME */
 
-.conoceme h2 {
+.section h2 {
     text-align: center;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0;
     color: #fff;
     letter-spacing: 0.3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -158,7 +158,7 @@ body {
     position: fixed;
     width: 90vw;
     bottom: 2rem;
-    display: flex;
+    display: none; /* QUITAR DESPUÉS */
     justify-content: space-between;
     align-items: baseline;
 }
@@ -182,6 +182,56 @@ body {
     margin: 0 0.2rem;
 }
 
+/* Conocimientos */
+
+.conoc__languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.languages__icon {
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.conoc__languages .html {
+    font-family: monospace;
+}
+
+.conoc__languages .css {
+    font-weight: 100;
+    letter-spacing: 0.6rem;
+    background-color: #00f;
+    border-radius: 5px;
+    color: #fff
+}
+
+.conoc__languages .Javascript span {
+    margin: 0 3px;
+}
+
+.conoc__languages .Javascript {
+    cursor: default;
+}
+
+.conoc__languages .Javascript span:hover {
+    color: #ff0;
+}
+
+.conoc__languages .python {
+    background-image: linear-gradient(to right, #0f0, #ab0);
+    background-clip: text;
+    color: transparent;
+}
+
+.conoc__languages .sql, .conoc__languages .git {
+    cursor: pointer;
+}
+
 /* KEYFRAMES */
 
 @keyframes rebotar {
@@ -190,6 +240,42 @@ body {
     }
     100% {
         transform: translate(0px, 10px);
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes desplazar {
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes arcoiris {
+    0% {
+        color: #fb0;
+    }
+    20% {
+        color: #2bb
+    }
+    40% {
+        color: #0f0;
+    }
+    60% {
+        color: #ff0;
+    }
+    80% {
+        color: #bbb
+    }
+    100% {
+        color: #f0f;
     }
 }
 

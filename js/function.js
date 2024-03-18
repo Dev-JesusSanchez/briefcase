@@ -79,3 +79,64 @@ wordGit.addEventListener('click', ()=>{
     let numAl = numAleatorio(versions)
     animationsGit(versions[numAl][0], versions[numAl][1])
 })
+
+// Exp find-number
+
+const optionsNumbers = document.getElementsByClassName('option-number');
+
+const createOptions = cant => {
+    const contFather = document.getElementById('numbers-posibles');
+    const fragment = document.createDocumentFragment();
+
+    contFather.innerHTML = '';
+
+    cant = parseInt(cant)
+
+    for (let i = 1; i <= cant; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        fragment.appendChild(option);
+    }
+
+    contFather.appendChild(fragment);
+};
+
+const generateNumber = num => Math.floor(Math.random()*num);
+let numGenerado;
+
+for(let i = 0; i < optionsNumbers.length; i++) {
+    optionsNumbers[i].addEventListener('click', e=>{
+        let cantidaOpt = e.target.textContent;
+        createOptions(cantidaOpt)
+        numGenerado = generateNumber(cantidaOpt)
+    })
+}
+
+document.getElementById('send-number').addEventListener('click', ()=> {
+    const numInsert = document.getElementById('numbers-posibles').value;
+    let numInsertInt = parseInt(numInsert);
+
+    console.log(numInsertInt)
+    console.log(numGenerado)
+
+    if (numInsertInt > numGenerado) {
+        swal("Reinténtalo", `El número ${numInsertInt} es mayor al número generado`, "info");
+    }else if (numInsertInt < numGenerado) {
+        swal("Reinténtalo", `El número ${numInsertInt} es menor al número generado`, "info");
+    }else if (numInsertInt == numGenerado) {
+        swal("Correcto", `El número ${numInsertInt} coincide con el generado`, "success");
+    }else if (!numInsertInt) {
+        swal("Oh!", `No has seleccionado ningún número`, "warning");
+    }else {
+        swal("Error", 'Ha ocurrido un error no contemplado', "warning");
+    }
+})
+
+document.getElementById('reload-number').addEventListener('click', ()=>{
+    const contNumbers = document.getElementById('numbers-posibles')
+    contNumbers.innerHTML = '';
+    const optionBase = document.createElement('option')
+    optionBase.textContent = 'Selecciona un número límite';
+    contNumbers.appendChild(optionBase)
+})

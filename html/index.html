@@ -8,18 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Desarrollo Web - Jesús Sánchez</title>
 </head>
 <body>
     <header class="header">
         <nav class="navigation">
             <ul class="navigation__list">
-                <a href="#inicio"><li class="navigation__list__items">Inicio</li></a>
-                <a href="#conoceme"><li class="navigation__list__items">Conóceme</li></a>
-                <a href="#conocimientos"><li class="navigation__list__items">Conocimientos</li></a>
-                <a href=""><li class="navigation__list__items">Proyectos</li></a>
-                <a href=""><li class="navigation__list__items">Experimentos</li></a>
-                <a href=""><li class="navigation__list__items">Conóceme</li></a>
+                <a href="#inicio" rel="noreferrer nofollow"><li class="navigation__list__items">Inicio</li></a>
+                <a href="#conoceme" rel="noreferrer nofollow"><li class="navigation__list__items">Conóceme</li></a>
+                <a href="#conocimientos" rel="noreferrer nofollow"><li class="navigation__list__items">Conocimientos</li></a>
+                <a href="#proyectos" rel="noreferrer nofollow"><li class="navigation__list__items">Proyectos</li></a>
+                <a href="#exp" rel="noreferrer nofollow"><li class="navigation__list__items">Experimentos</li></a>
+                <a href="" rel="noreferrer nofollow"><li class="navigation__list__items">Conóceme</li></a>
             </ul>
         </nav>
     </header>
@@ -71,8 +72,38 @@
                 <p class="languages__icon git" id="language-git">GIT</p>
             </div>
         </section>
-        <section class="section"></section>
-        <section class="section"></section>
+        <section class="section proyectos" id="proyectos">
+            <fieldset>
+                <legend>Proyectos</legend>
+                <p>Lo siento, aún no tenemos ningún proyecto profesional. Estamos trabajando  en ello. 😉 Desliza para ver mis experimentos.</p>
+            </fieldset>
+        </section>
+        <section class="section exp" id="exp">
+            <fieldset>
+                <legend>Experimentos</legend>
+                <div class="exp__proyects">
+                    <h2>Adivina número</h2>
+                    <div class="find-number experimento">
+                        <div class="date-numbers">
+                            <div>
+                                <button class="elm-modern reload"><i class="fa-solid fa-rotate-right" id="reload-number"></i></button>
+                            </div>
+                            <div class="numbers">
+                                <select class="elm-modern" name="" id="numbers-posibles">
+                                    <option value="">Selecciona un número límite</option>
+                                </select>
+                                <button class="elm-modern" id="send-number"><i class="fa-regular fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                        <div class="value-numbers">
+                            <button class="elm-modern option-number">10</button>
+                            <button class="elm-modern option-number">25</button>
+                            <button class="elm-modern option-number">50</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
         <section class="section"></section>
     </main>
     <footer class="footer">

@@ -3,6 +3,13 @@
     --gradient-second: #25d
 }
 
+/* Fuentes externas */
+
+@font-face {
+    font-family: ios;
+    src: url('../fonts/ios.ttf');
+}
+
 /* STYLE GENERAL */
 
 * {
@@ -106,9 +113,9 @@ body {
 
 /* CONOCEME */
 
-.section h2 {
+.section h2, legend{
     text-align: center;
-    margin: 1rem 0;
+    margin: 3rem 0 1rem 0;
     color: #fff;
     letter-spacing: 0.3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -232,6 +239,89 @@ body {
     cursor: pointer;
 }
 
+/* Fieldeset */
+
+fieldset {
+    margin: 3rem 2rem;
+    padding: 0 2rem;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--gradient-primary), var(--gradient-second)) 1; /* La anchura del slice */
+} 
+
+legend {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.proyectos p {
+    font-family: ios;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+}
+
+.exp__proyects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experimento {
+    height: auto; /* Cambiado a auto para que se ajuste al contenido */
+    width: 90%; /* Reducido el ancho para adaptarse mejor a dispositivos móviles */
+    background-color: #aaa;
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+}
+
+.experimento h2 {
+    margin: 0 0 2rem 0;
+}
+
+/* Encontrar números */
+
+.find-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%; /* Reducido el ancho para adaptarse mejor a dispositivos móviles */
+    max-width: 400px; /* Limitar el ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+    margin: 0 auto 2rem auto;
+}
+
+.elm-modern {
+    background-color: #555;
+    padding: 0.7rem;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.numbers {
+    flex: 2;
+    text-align: right;
+}
+
+.numbers select {
+    width: 100%; /* Ajustado el ancho al 100% para que se ajuste al contenedor */
+    max-width: 200px; /* Limitar el ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+}
+
+
 /* KEYFRAMES */
 
 @keyframes rebotar {
@@ -296,5 +386,48 @@ body {
 
     .conoceme__options {
         margin: 0 0 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .date-numbers {
+        flex-direction: column;
+    }
+
+    .reload {
+        display: none;
+    }
+
+    .numbers {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    .conoceme p {
+        line-height: 1.5rem;
+        text-align: left;
+    }
+
+    .languages__icon {
+        font-size: 1rem;
+    }
+
+    fieldset {
+        margin: 3rem 0;
+    }
+
+    .section h2, legend, .proyectos p {
+        font-size: 1rem;
+    }
+
+    .content {
+        margin: 0 1rem;
+    }
+
+    .value-numbers {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 0;
     }
 }

@@ -19,10 +19,8 @@
 }
 
 html {
+    padding: 0 2rem 5rem 2rem;
     scroll-behavior: smooth;
-}
-
-body {
     background: linear-gradient(var(--gradient-primary), var(--gradient-second));
 }
 
@@ -45,7 +43,7 @@ body {
 
 .navigation__list a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .navigation__list__items {
@@ -71,15 +69,10 @@ body {
     transition: width 1s ease;
 }
 
-/* INICIO */
-
-.content {
-    margin: 0 2rem;
-}
+/* PAGINA DE INICIO */
 
 .content .inicio {
     display: flex;
-    /* align-items: baseline; */
     justify-content: space-around;
     height: 90vh;
 }
@@ -158,37 +151,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* FOOTER */
-
-.footer {
-    margin: 0 2rem;
-    position: fixed;
-    width: 90vw;
-    bottom: 2rem;
-    display: none; /* QUITAR DESPUÉS */
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.footer-button {
-    padding: 1rem;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(var(--gradient-primary), var(--gradient-second));
-}
-
-.footer-social {
-    padding: 0.5rem 1rem;
-    background: linear-gradient(var(--gradient-primary), var(--gradient-second));
-    border-radius: 20px;
-}
-
-.footer-social a {
-    color: #000;
-    margin: 0 0.2rem;
-}
-
 /* Conocimientos */
 
 .conoc__languages {
@@ -210,7 +172,6 @@ body {
 }
 
 .conoc__languages .css {
-    font-weight: 100;
     letter-spacing: 0.6rem;
     background-color: #00f;
     border-radius: 5px;
@@ -242,18 +203,17 @@ body {
 /* Fieldeset */
 
 fieldset {
-    margin: 3rem 2rem;
-    padding: 0 2rem;
+    margin: 1rem auto;
+    padding: 1rem;
     text-align: center;
     border-width: 1px;
     border-style: solid;
-    border-image: linear-gradient(to bottom, var(--gradient-primary), var(--gradient-second)) 1; /* La anchura del slice */
-} 
+    border-image: linear-gradient(to bottom, var(--gradient-primary), var(--gradient-second)) 1;
+}
 
 legend {
     padding: 0 1rem;
     font-size: 1.5rem;
-    margin: 0;
 }
 
 .proyectos p {
@@ -271,16 +231,16 @@ legend {
 }
 
 .experimento {
-    height: auto; /* Cambiado a auto para que se ajuste al contenido */
-    width: 90%; /* Reducido el ancho para adaptarse mejor a dispositivos móviles */
+    height: auto;
+    width: 60%;
     background-color: #aaa;
     padding: 2rem;
     border-radius: 20px;
-    margin: 1rem 0;
+    margin: 1rem auto;
 }
 
 .experimento h2 {
-    margin: 0 0 2rem 0;
+    margin: -2rem 0 2rem 0;
 }
 
 /* Encontrar números */
@@ -296,9 +256,9 @@ legend {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 90%; /* Reducido el ancho para adaptarse mejor a dispositivos móviles */
-    max-width: 400px; /* Limitar el ancho máximo para evitar que se extienda demasiado en pantallas grandes */
-    margin: 0 auto 2rem auto;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 0 2rem 0;
 }
 
 .elm-modern {
@@ -307,7 +267,6 @@ legend {
     border-radius: 7px;
     color: #fff;
     border: none;
-    outline: none;
     cursor: pointer;
 }
 
@@ -317,10 +276,125 @@ legend {
 }
 
 .numbers select {
-    width: 100%; /* Ajustado el ancho al 100% para que se ajuste al contenedor */
-    max-width: 200px; /* Limitar el ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+    width: 100%;
+    max-width: 200px;
 }
 
+/* Buscar libros */
+
+.search {
+    background-color: #ddd;
+}
+
+.search-book {
+    margin-right: -1rem;
+    border-radius: 20px 0 0 20px;
+    background-color: #333;
+    cursor: text;
+    padding-left: 2rem;
+    outline: none
+}
+
+.button-search {
+    border-radius: 0 20px 20px 0;
+    color: #eee;
+}
+
+.search-book::placeholder {
+    color: #aaa;
+}
+
+/* RELOJ */
+
+.content-reloj {
+    display: inline-flex;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.content-reloj div {
+    margin: 0 0.5rem 0 0;
+}
+
+/* CONTACTO */
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: auto;
+}
+
+.form-contact input, .form-contact textarea {
+    cursor: text;
+    margin-bottom: 1rem;
+    background-color: #ffffff66;
+    padding: 1rem;
+    border-radius: 7px;
+    border: none;
+    outline: none
+}
+
+.label-asunto {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.contact-msg {
+    resize: none;
+    overflow: auto;
+}
+
+.form-contact input::placeholder, .form-contact textarea::placeholder {
+    color: #333;
+}
+
+.submit-mail {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: #ffffff77;
+    color: #222;
+    text-decoration: none;
+    margin: auto;
+}
+
+.submit-mail:hover {
+    background-color: #fff;
+    transition: background-color 500ms ease;
+}
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    width: 95vw;
+    bottom: 2rem;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footer-button {
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(var(--gradient-primary), var(--gradient-second));
+    position: absolute;
+    bottom: -1rem;
+    right: 2rem;
+    color: #010101;
+}
+
+.footer-social {
+    display: inline;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(var(--gradient-primary), var(--gradient-second));
+    border-radius: 20px;
+}
+
+.footer-social a {
+    color: #000;
+    margin: 0 0.2rem;
+}
 
 /* KEYFRAMES */
 
@@ -372,6 +446,10 @@ legend {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 600px) {
+    .experimento {
+        width: 90%;
+    }
+    
     .content .inicio {
         flex-direction: column;
         align-items: center;
@@ -384,16 +462,6 @@ legend {
         height: 30vh;
     }
 
-    .conoceme__options {
-        margin: 0 0 1rem 0;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .date-numbers {
-        flex-direction: column;
-    }
-
     .reload {
         display: none;
     }
@@ -403,31 +471,60 @@ legend {
     }
 }
 
+@media only screen and (max-width: 430px) {
+    .search-book {
+        width: 50%;
+    }
+
+    .search-book::placeholder {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .submit-mail {
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+}
+
 @media only screen and (max-width: 281px) {
+    html {
+        padding: 2rem 0 4rem 0
+    }
+
     .conoceme p {
         line-height: 1.5rem;
         text-align: left;
     }
 
     .languages__icon {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
     fieldset {
-        margin: 3rem 0;
+        margin: 2rem 0 0 0;
     }
 
     .section h2, legend, .proyectos p {
         font-size: 1rem;
     }
 
-    .content {
-        margin: 0 1rem;
-    }
-
     .value-numbers {
         display: flex;
         flex-direction: column;
-        margin: 0.5rem 0;
+    }
+
+    .submit-mail {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .form-contact input::placeholder {
+        opacity: 0;
+    }
+
+    .footer {
+        margin: 0;
     }
 }

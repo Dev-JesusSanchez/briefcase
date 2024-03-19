@@ -9,18 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<meta name="author" content="Jesús Andrés Sánchez Acosta">
+<meta name="description" content="Portafolio Web del desarrollador Jesús que presenta los conocimientos de éste">
+<meta name="keywords" content="Portafolio, Desarrollador, Programador, Front End, Desarrollo, Proyectos">
     <title>Desarrollo Web - Jesús Sánchez</title>
 </head>
 <body>
     <header class="header">
-        <nav class="navigation">
+        <nav class="navigation" id="nav">
             <ul class="navigation__list">
-                <a href="#inicio" rel="noreferrer nofollow"><li class="navigation__list__items">Inicio</li></a>
-                <a href="#conoceme" rel="noreferrer nofollow"><li class="navigation__list__items">Conóceme</li></a>
-                <a href="#conocimientos" rel="noreferrer nofollow"><li class="navigation__list__items">Conocimientos</li></a>
-                <a href="#proyectos" rel="noreferrer nofollow"><li class="navigation__list__items">Proyectos</li></a>
-                <a href="#exp" rel="noreferrer nofollow"><li class="navigation__list__items">Experimentos</li></a>
-                <a href="" rel="noreferrer nofollow"><li class="navigation__list__items">Conóceme</li></a>
+                <a href="#inicio" rel="noreferrer nofollow"><li class="navigation__list__items" aria-label="Ir a inicio" tabindex="10">Inicio</li></a>
+                <a href="#conoceme" rel="noreferrer nofollow" aria-label="Ir a mi descripción" tabindex="20"><li class="navigation__list__items">Conóceme</li></a>
+                <a href="#conocimientos" aria-label="Ir a conocimientos del desarrollador" rel="noreferrer nofollow" tabindex="30"><li class="navigation__list__items">Conocimientos</li></a>
+                <a href="#proyectos" rel="noreferrer nofollow" aria-label="Proyectos realizados" tabindex="40"><li class="navigation__list__items">Proyectos</li></a>
+                <a href="#exp" rel="noreferrer nofollow" tabindex="50"><li class="navigation__list__items" aria-label="Experimentos realizados">Experimentos</li></a>
+                <a href="#contacto" rel="noreferrer nofollow" aria-label="Contactáme" tabindex="60"><li class="navigation__list__items">Contacto</li></a>
             </ul>
         </nav>
     </header>
@@ -31,31 +34,31 @@
             </div>
             <div class="name">
                 <div class="name__names">
-                    <p><a href="" class="name__firstname" id="firstname">Jesús</a></p>
-                    <p><a href="" class="name__secondname" id="secondname">Sánchez</a><p>
+                    <p><a href="" class="name__firstname" id="firstname" aria-label="Ir a los conocimientos del programador" tabindex="70">Jesús</a></p>
+                    <p><a href="" class="name__secondname" id="secondname" aria-label="Ir a los experimentos del programador" tabindex="80">Sánchez</a><p>
                 </div>
                 <div class="arrow">
-                    <a href="#conoceme"><i class="fa-solid fa-caret-down"></i></a>
+                    <a href="#conoceme" aria-label="Ir a la descripción del desarrollador" tabindex="90"><i class="fa-solid fa-caret-down"></i></a>
                 </div>
             </div>
         </section>
         <section class="section conoceme" id="conoceme">
-            <h2>Conóceme</h2>
-            <p>Soy Jesús Sánchez, un desarrollador web con experiencia en HTML, CSS, Javascript, Python, SQL y Git. (Actualmente aprendiendo nuevas tecnologías)</p>
+            <h2 tabindex="100">Conóceme</h2>
+            <p tabindex="110">Soy Jesús Sánchez, un desarrollador web con experiencia en HTML, CSS, Javascript, Python, SQL y Git. (Actualmente aprendiendo nuevas tecnologías)</p>
             <div class="conoceme__arrow">
-                <i class="fa-solid fa-caret-down"></i>
+                <i class="fa-solid fa-caret-down" tabindex="120" aria-label="Más sobre el programador"></i>
             </div>
             <div class="conoceme__option">
-                <a href="../documents/Diploma.pdf" target='_blank' class="conoceme__options">Diploma</a>
-                <a href="../documents/Hoja de vida.pdf" target="_blank" class="conoceme__options">Hoja de vida</a>
+                <a href="../documents/Diploma.pdf" target='_blank' class="conoceme__options" tabindex="130">Diploma</a>
+                <a href="../documents/Hoja de vida.pdf" target="_blank" class="conoceme__options" tabindex="140">Hoja de vida</a>
             </div>
         </section>
         <section class="section conocimientos" id="conocimientos">
-            <h2>Conocimientos</h2>
+            <h2 tabindex="150">Conocimientos</h2>
             <div class="conoc__languages">
-                <p class="languages__icon html" id="language-html"></p>
-                <p class="languages__icon css">Css</p>
-                <p class="languages__icon Javascript" id="language-js">
+                <p class="languages__icon html" id="language-html" tabindex="160" aria-label="HTML"></p>
+                <p class="languages__icon css" tabindex="170">Css</p>
+                <p class="languages__icon Javascript" id="language-js" aria-label="Javascript" tabindex="180">
                     <span>J</span>
                     <span>a</span>
                     <span>v</span>
@@ -67,53 +70,80 @@
                     <span>p</span>
                     <span>t</span>
                 </p>
-                <p class="languages__icon python">Python</p>
-                <p class="languages__icon sql" id="language-sql">SQL</p>
-                <p class="languages__icon git" id="language-git">GIT</p>
+                <p class="languages__icon python" tabindex="190">Python</p>
+                <p class="languages__icon sql" id="language-sql" tabindex="200">SQL</p>
+                <p class="languages__icon git" id="language-git" tabindex="210">GIT</p>
             </div>
         </section>
         <section class="section proyectos" id="proyectos">
             <fieldset>
-                <legend>Proyectos</legend>
-                <p>Lo siento, aún no tenemos ningún proyecto profesional. Estamos trabajando  en ello. 😉 Desliza para ver mis experimentos.</p>
+                <legend tabindex="220">Proyectos</legend>
+                <p tabindex="230">Lo siento, aún no tenemos ningún proyecto profesional. Estamos trabajando  en ello. 😉 Desliza para ver mis experimentos.</p>
             </fieldset>
         </section>
         <section class="section exp" id="exp">
             <fieldset>
-                <legend>Experimentos</legend>
+                <legend tabindex="240">Experimentos</legend>
                 <div class="exp__proyects">
-                    <h2>Adivina número</h2>
+                    <h2 tabindex="250">Adivina número</h2>
                     <div class="find-number experimento">
                         <div class="date-numbers">
                             <div>
-                                <button class="elm-modern reload"><i class="fa-solid fa-rotate-right" id="reload-number"></i></button>
+                                <button class="elm-modern reload" aria-label="Reiniciar selección" tabindex="310"><i class="fa-solid fa-rotate-right" id="reload-number"></i></button>
                             </div>
                             <div class="numbers">
-                                <select class="elm-modern" name="" id="numbers-posibles">
+                                <select tabindex="290" class="elm-modern" name="" id="numbers-posibles">
                                     <option value="">Selecciona un número límite</option>
                                 </select>
-                                <button class="elm-modern" id="send-number"><i class="fa-regular fa-paper-plane"></i></button>
+                                <button aria-label="Comprobar si el número indicado es igaul al número generado" class="elm-modern" id="send-number" tabindex="300"><i class="fa-regular fa-paper-plane"></i></button>
                             </div>
                         </div>
                         <div class="value-numbers">
-                            <button class="elm-modern option-number">10</button>
-                            <button class="elm-modern option-number">25</button>
-                            <button class="elm-modern option-number">50</button>
+                            <button class="elm-modern option-number" aria-label="Generar número entre uno y diez" tabindex="260">10</button>
+                            <button class="elm-modern option-number" aria-label="Generar número entre uno y veinticinco" tabindex="270">25</button>
+                            <button class="elm-modern option-number" tabindex="280" aria-label="Generar número entre uno y cincuenta">50</button>
                         </div>
+                    </div>
+                </div>
+                <h2 tabindex="320">Buscar libros</h2>
+                <div class="experimento search">
+                    <div class="actions">
+                        <form action="">
+                            <input class="elm-modern search-book" type="text" placeholder='Buscar libro' aria-label="Ingresa el nombre del libro a buscar" tabindex="330">
+                            <button class="elm-modern button-search" aria-label="Buscar" tabindex="340"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <h2 tabindex="350">Reloj</h2>
+                <div class="experimento">
+                    <div class="content-reloj elm-modern">
+                        <div class="content-hour" id="reloj-hour" tabindex="360">00</div>
+                        <div class="content-minutes" id="reloj-minutes" tabindex="370">00</div>
+                        <div class="content-seconds" id="reloj-seconds" tabindex="380">00</div>
                     </div>
                 </div>
             </fieldset>
         </section>
-        <section class="section"></section>
+        <section class="section" id="contacto">
+            <h2 tabindex="390">Contáctame</h2>
+            <form action="" class="form-contact">
+                <label class="label-asunto" for="asunto">Asunto: </label>
+                <input type="text" name="" id="asunto" class="contact-asunt elm-modern" placeholder="Escribe tu asunto" aria-label="Ingresa el asunto del correo electrónico" tabindex="400">
+
+                <textarea name="" id="mensaje" cols="30" rows="10" class="contact-msg elm-modern" placeholder="Mensaje" aria-label="Ingresa el mensaje del correo electrónico" tabindex="410"></textarea>
+
+                <a href="" role="input" class="submit-mail" tabindex="420">Enviar correo</a>
+            </form>
+        </section>
     </main>
     <footer class="footer">
         <div>
-            <button class="footer__element footer-button"><i class="fa-solid fa-arrow-up"></i></button>
+            <a href="#nav" class="footer__element footer-button" aria-label="Volver al inicio" tabindex="470"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
-        <div class="footer-social">
-            <a href="" class="footer__element"><i class="fa-brands fa-github"></i></a>
-            <a href="" class="footer__element"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="" class="footer__element"><i class="fa-solid fa-envelope"></i></a>
+        <div class="footer-social" tabindex="430" aria-label="Redes de contacto del programador">
+            <a href="https://github.com/Dev-JesusSanchez" class="footer__element" aria-label="Ir al GitHub" tabindex="440" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/573209762296" class="footer__element" aria-label="Ir al Whatsapp" tabindex="450" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:jesusprogramador3@gmail.com" class="footer__element" tabindex="460" aria-label="Ir al Correo electrónico"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
     <script src="../js/function.js"></script>
